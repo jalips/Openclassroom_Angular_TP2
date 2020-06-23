@@ -1,5 +1,4 @@
-import {Component, Input} from '@angular/core';
-import {Post} from './models/Post.model';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +7,6 @@ import {Post} from './models/Post.model';
 })
 export class AppComponent {
   title = 'openclassroomAngularTp2';
-
-  @Input() posts: Post[] = [
-    new Post('Mon premier post', 'Le contenu de mon premier post', 1),
-    new Post('Mon second post', '----- NC -----', 0),
-    new Post('Mon dernier post', 'Bla bla bla bla.', 1),
-  ];
 
 }
 

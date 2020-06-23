@@ -1,14 +1,16 @@
 <li [ngClass]="{'list-group-item': true,
-                'list-group-item-success': postLoveIts,
-                'list-group-item-danger': !postLoveIts }">
-  <h4>{{ postTitle }}</h4>
-  <i>{{ postCreatedAt | date: 'y MMMM EEEE d' }}</i>
-  <p>{{ postContent }}</p>
+                'list-group-item-success': post.loveIts,
+                'list-group-item-danger': !post.loveIts }">
+  <h4>{{ post.title }}</h4>
+  <i>{{ post.createdAt | date: 'y MMMM EEEE d' }}</i>
+  <p>{{ post.content }}</p>
 
   <button class="btn btn-sm btn-success"
-          [disabled]="!postLoveIts"
+          [disabled]="!post.loveIts"
           (click)="loveIt()">Love it!</button>
   <button class="btn btn-sm btn-danger"
-          [disabled]="postLoveIts"
+          [disabled]="post.loveIts"
           (click)="loveIt()">Don't love it!</button>
+  <button class="btn btn-sm btn-warning"
+          (click)="deletePost(post)">Delete</button>
 </li>
