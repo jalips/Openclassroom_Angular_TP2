@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Post} from './models/Post.model';
 
 @Component({
@@ -9,7 +9,7 @@ import {Post} from './models/Post.model';
 export class AppComponent {
   title = 'openclassroomAngularTp2';
 
-  posts: Post[] = [
+  @Input() posts: Post[] = [
     new Post('Mon premier post', 'Le contenu de mon premier post', 1),
     new Post('Mon second post', '----- NC -----', 0),
     new Post('Mon dernier post', 'Bla bla bla bla.', 1),
